@@ -91,7 +91,7 @@ jobs: # 워크플로우에서 실행할 작업들
       - name: Push changes
         run: |
           git add .
-          if git diff-index —quiet HEAD; then # 현재 HEAD와 스테이징된 파일의 차이를 확인합니다.
+          if git diff-index --quiet HEAD; then # 현재 HEAD와 스테이징된 파일의 차이를 확인합니다.
             echo "No changes to commit."
           else
             git commit -m "COMMITTED BY ${USER_NAME}: Processed ${LATEST_FOLDER_NAME}"
